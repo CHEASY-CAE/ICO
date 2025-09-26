@@ -3,100 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHEASY | مستقبل التجارة اللامركزية</title>
-    <meta name="description" content="CHEASY تُعيد تعريف التجارة من خلال منظومة اقتصادية متكاملة تربط بين تجارة التجزئة الذكية وقوة الويب 3.0، لخلق مستقبل تجاري يملكه مجتمعه.">
-    <meta name="keywords" content="CHEASY, تجارة الكترونية, ويب 3.0, بلوك تشين, عملات رقمية, تجارة لامركزية, اقتصاد تشاركي">
-    <link rel="icon" href="Media/logo/cheasy-logo.svg" type="image/svg+xml">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cheasy.finance/">
-    <meta property="og:title" content="CHEASY | مستقبل التجارة اللامركزية">
-    <meta property="og:description" content="CHEASY تُعيد تعريف التجارة من خلال منظومة اقتصادية متكاملة تربط بين تجارة التجزئة الذكية وقوة الويب 3.0.">
-    <meta property="og:image" content="Media/logo/cheasy-logo.svg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://cheasy.finance/">
-    <meta property="twitter:title" content="CHEASY | مستقبل التجارة اللامركزية">
-    <meta property="twitter:description" content="CHEASY تُعيد تعريف التجارة من خلال منظومة اقتصادية متكاملة تربط بين تجارة التجزئة الذكية وقوة الويب 3.0.">
-    <meta property="twitter:image" content="Media/logo/cheasy-logo.svg">
-
+    <title>مذكرة استثمارية: تمويل جولة أولية لمشروع CHEASY</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #0D0D1A;
-            color: #E0E0E0;
+            background-color: #f9fafb; /* Light Gray */
+            color: #1f2937; /* Dark Gray */
         }
-        .hero-gradient {
-            background: radial-gradient(ellipse at bottom, #1D114A 0%, #0D0D1A 70%);
+        .gradient-text {
+            background: linear-gradient(90deg, #15803d, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
         }
-        .section-gradient {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .shiny-button {
-            background: linear-gradient(90deg, #FDB813 0%, #FFAA00 100%);
-            box-shadow: 0 0 20px rgba(253, 184, 19, 0.4);
-            transition: all 0.3s ease;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
-        .shiny-button:hover {
+        .btn-primary {
+            background-color: #16a34a; /* Green-600 */
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 12px 24px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #15803d; /* Green-700 */
             transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(253, 184, 19, 0.6);
         }
-        .secondary-button {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
         }
-        .secondary-button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        .pill {
+            background-color: rgba(22, 163, 74, 0.1);
+            color: #15803d;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
+        .chart-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
         }
-        .flywheel-dot {
-            width: 12px;
-            height: 12px;
-            background-color: #FDB813;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #FDB813;
-        }
-        .timeline::before {
-            content: '';
+        .chart {
             position: absolute;
             top: 0;
-            bottom: 0;
-            right: 17px; /* Adjusted for RTL */
-            width: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 12px;
-            right: -13px; /* Adjusted for RTL */
-            width: 20px;
-            height: 20px;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            background: #0D0D1A;
-            border: 4px solid #FDB813;
-            box-shadow: 0 0 15px #FDB813;
-            z-index: 1;
         }
-        /* Scroll animations */
+        .chart-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        /* Reveal on scroll */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.8s, transform 0.8s;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .reveal.visible {
             opacity: 1;
@@ -104,316 +87,231 @@
         }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden">
+<body class="antialiased">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="#" aria-label="Homepage">
-                    <img src="Media/logo/cheasy-logo.svg" alt="CHEASY Logo" class="h-10">
-                </a>
-                <nav class="hidden md:flex items-center space-x-reverse space-x-8">
-                    <a href="#vision" class="hover:text-[#FDB813] transition-colors">الرؤية</a>
-                    <a href="#tokenomics" class="hover:text-[#FDB813] transition-colors">اقتصاد رمز</a>
-                    <a href="#roadmap" class="hover:text-[#FDB813] transition-colors">خارطة الطريق</a>
-                    <a href="#team" class="hover:text-[#FDB813] transition-colors">الفريق</a>
-                </nav>
-                <a href="#" class="shiny-button text-black font-bold py-2 px-6 rounded-lg">انضم للمجتمع</a>
-            </div>
+    <!-- Header and Hero Section -->
+    <header class="py-12 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+            <span class="pill">فرصة استثمارية حصرية</span>
+            <h1 class="gradient-text text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+                تمويل جولة أولية بقيمة 2.5 مليون دولار لمشروع CHEASY
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 mt-4">
+                لإعادة تعريف التجارة الإلكترونية العالمية عبر دمج قوة الويب 3.0 مع تجارة التجزئة الذكية وبناء منظومة اقتصادية متكاملة ومملوكة لمجتمعها.
+            </p>
         </div>
     </header>
 
-    <main>
-        <section class="relative pt-40 pb-20 hero-gradient min-h-screen flex items-center">
-            <div class="absolute inset-0 opacity-10">
-                </div>
-            <div class="container mx-auto px-4 text-center z-10">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-                    <span class="text-white">نُعيد تعريف التجارة.</span>
-                    <br>
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FDB813] to-[#FFAA00]">رخيص، سهل، يملكه مجتمعه.</span>
-                </h1>
-                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-10">
-                    CHEASY ليس مجرد متجر، بل منظومة اقتصادية متكاملة تربط بين تجارة التجزئة الذكية وقوة الويب 3.0. نحن نبني مستقبل التجارة الذي يكون فيه العميل هو الشريك والمستفيد الأول.
-                </p>
-                <div class="flex justify-center items-center space-x-reverse space-x-4">
-                    <a href="https://cnc.craft.me/cheasy" target="_blank" rel="noopener noreferrer" class="shiny-button text-black font-bold py-3 px-8 rounded-lg text-lg">اقرأ الورقة البيضاء</a>
-                    <a href="https://store.cheasy.finance" target="_blank" rel="noopener noreferrer" class="secondary-button text-white font-bold py-3 px-8 rounded-lg text-lg">استكشف المتجر</a>
-                </div>
+    <main class="container mx-auto px-6">
+        
+        <!-- Key Metrics Section -->
+        <section class="reveal grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="card p-6 text-center">
+                <h3 class="text-gray-500 text-lg">الطلب الاستثماري</h3>
+                <p class="gradient-text text-4xl font-bold mt-2">$2,500,000</p>
+            </div>
+            <div class="card p-6 text-center">
+                <h3 class="text-gray-500 text-lg">الجولة</h3>
+                <p class="text-gray-900 text-4xl font-bold mt-2">تمويل أولي (Seed)</p>
+            </div>
+            <div class="card p-6 text-center">
+                <h3 class="text-gray-500 text-lg">هدف الطرح الأولي للعملة</h3>
+                <p class="gradient-text text-4xl font-bold mt-2">$30,000,000</p>
             </div>
         </section>
 
-        <section id="problem" class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold">لماذا تحتاج التجارة الإلكترونية إلى ثورة؟</h2>
-                    <p class="text-lg text-gray-400 mt-2">السوق الحالي يعاني من تحديات جوهرية.</p>
+        <!-- Problem & Solution Section -->
+        <section class="reveal mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-8">
+                    <h2 class="section-title text-gray-900 mb-4">المشكلة</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        يعاني سوق التجارة الإلكترونية الحالي من تآكل هوامش الربح بسبب المنافسة الشرسة، ضعف ولاء العملاء، والاستغلال غير العادل لبياناتهم. هذه المشاكل تحد من النمو وتخلق علاقة غير مستدامة بين التاجر والمستهلك.
+                    </p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="glass-card p-8 text-center reveal" style="transition-delay: 100ms;">
-                        <i data-lucide="trending-down" class="mx-auto w-12 h-12 text-[#FDB813] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">هوامش متآكلة</h3>
-                        <p class="text-gray-400">المنافسة الشرسة تضغط على الأرباح وتقلل من جودة الخدمة.</p>
-                    </div>
-                    <div class="glass-card p-8 text-center reveal" style="transition-delay: 200ms;">
-                        <i data-lucide="clock" class="mx-auto w-12 h-12 text-[#FDB813] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">شحن بطيء ومكلف</h3>
-                        <p class="text-gray-400">اللوجستيات المعقدة ترفع التكاليف وتؤخر وصول المنتجات للعميل.</p>
-                    </div>
-                    <div class="glass-card p-8 text-center reveal" style="transition-delay: 300ms;">
-                        <i data-lucide="heart-off" class="mx-auto w-12 h-12 text-[#FDB813] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">ولاء ضعيف</h3>
-                        <p class="text-gray-400">العملاء يبحثون عن السعر الأقل دون أي ارتباط حقيقي بالعلامة التجارية.</p>
-                    </div>
-                    <div class="glass-card p-8 text-center reveal" style="transition-delay: 400ms;">
-                        <i data-lucide="database-zap" class="mx-auto w-12 h-12 text-[#FDB813] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">استغلال البيانات</h3>
-                        <p class="text-gray-400">بيانات العملاء هي أصول تُباع وتُشترى دون أي عائد لهم.</p>
-                    </div>
+                <div class="card p-8 border-green-600 border-2">
+                    <h2 class="section-title gradient-text mb-4">الحل الذي نقدمه</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        CHEASY يقدم حلاً شاملاً عبر منظومة اقتصادية يكون فيها العميل هو الشريك والمستفيد الأول. من خلال عملتنا الرقمية $CHEASY، نُفعّل آليات مبتكرة مثل الاسترداد النقدي الفوري، ونظام "الشراء والحرق" لزيادة قيمة العملة، ومنصة إبداع يشارك فيها المجتمع.
+                    </p>
                 </div>
             </div>
         </section>
-
-        <section id="solution" class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold">الحل: CHEASY للنمو المستدام</h2>
-                    <p class="text-lg text-gray-400 mt-2">منظومة متكاملة حيث كل جزء يغذي الآخر، والمجتمع في قلبها.</p>
-                </div>
-                <div class="max-w-4xl mx-auto reveal">
-                    <div class="relative p-8 section-gradient flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-64 h-64 md:w-96 md:h-96 border-2 border-dashed border-gray-600 rounded-full animate-spin-slow"></div>
-                        </div>
-
-                        <div class="z-10 text-center flex flex-col items-center md:absolute top-8 left-1/2 -translate-x-1/2">
-                            <div class="flywheel-dot mb-2"></div>
-                            <h4 class="font-bold text-lg">متجر قوي</h4>
-                            <p class="text-sm text-gray-400">مبيعات عالية (GMV)</p>
-                        </div>
-                        <div class="z-10 text-center flex flex-col items-center md:absolute right-8 top-1/2 -translate-y-1/2">
-                             <div class="flywheel-dot mb-2"></div>
-                            <h4 class="font-bold text-lg">أرباح متزايدة</h4>
-                            <p class="text-sm text-gray-400">هوامش ربح صحية</p>
-                        </div>
-                         <div class="z-10 text-center flex flex-col items-center md:absolute bottom-8 left-1/2 -translate-x-1/2">
-                            <div class="flywheel-dot mb-2"></div>
-                             <h4 class="font-bold text-lg">شراء وحرق</h4>
-                             <p class="text-sm text-gray-400">زيادة قيمة العملة</p>
-                        </div>
-                        <div class="z-10 text-center flex flex-col items-center md:absolute left-8 top-1/2 -translate-y-1/2">
-                            <div class="flywheel-dot mb-2"></div>
-                            <h4 class="font-bold text-lg">مجتمع مزدهر</h4>
-                            <p class="text-sm text-gray-400">ولاء ومبيعات أعلى</p>
-                        </div>
-
+        
+        <!-- Use of Proceeds Section -->
+        <section class="reveal card p-8 md:p-12 mb-20">
+            <h2 class="section-title text-center text-gray-900 mb-10">خطة استخدام التمويل</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="chart-container">
+                    <div class="chart" style="background-image: conic-gradient(from 0deg, #16a34a 0% 60%, #22c55e 60% 85%, #4ade80 85% 95%, #86efac 95% 100%);"></div>
+                    <div class="chart-label">
+                        <p class="text-gray-700 text-lg">إجمالي التمويل</p>
+                        <p class="text-gray-900 text-4xl font-bold">$2.5M</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="tokenomics" class="py-20 bg-[#0D0D1A]">
-             <div class="container mx-auto px-4">
-                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold flex items-center justify-center">اقتصاديات عملة 
-                        <img src="Media/logo/cheasy-logo.svg" alt="CHEASY Token Symbol" class="h-10 mx-2 inline-block">
-                        <span class="text-[#FDB813]">$CHEASY</span>
-                    </h2>
-                    <p class="text-lg text-gray-400 mt-2">تصميم اقتصادي متين لدعم نمو المنظومة على المدى الطويل.</p>
-                    <p class="text-xl font-bold mt-4">المعروض الكلي (ثابت): 1,000,000,000</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="reveal">
-                        <img src="CHEASY-CAE/ICO/Media/logo/logo-512.jpeg" alt="مخطط توزيع عملة CHEASY" class="rounded-lg mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #16a34a;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">60% - التسويق والعلاقات العامة</p>
+                            <p class="text-gray-600">($1,500,000) للتعاقد مع كبار المؤثرين، الظهور الإعلامي، والحملات الإعلانية العالمية.</p>
+                        </div>
                     </div>
-                    <div class="space-y-6 reveal">
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-yellow-400 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">38% عرض العملة الأولي :</span> لجمع التمويل اللازم للإطلاق والتوسع.</p>
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #22c55e;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">25% - بناء وتوسيع المجتمع</p>
+                            <p class="text-gray-600">($625,000) لتنمية مجتمعاتنا على Telegram و Discord وإطلاق برامج المكافآت.</p>
                         </div>
-                         <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-yellow-500 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">20% صندوق المنظومة:</span> لحوافز التجار، الشراكات، ودعم رسوم الشبكة.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #4ade80;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">10% - الشراكات الاستراتيجية</p>
+                            <p class="text-gray-600">($250,000) للدخول في شراكات مع مشاريع Web3 ومنصات إطلاق (Launchpads).</p>
                         </div>
-                         <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-yellow-600 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">15% الفريق:</span> مع فترة استحقاق (Vesting) لضمان الالتزام طويل الأمد.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-yellow-700 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">12% تسويق ومجتمع:</span> لحملات الإحالة، المنح، وتوسيع قاعدة المستخدمين.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-orange-500 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">10% سيولة أولية:</span> لضمان سهولة التداول عند الإدراج في المنصات.</p>
-                        </div>
-                         <div class="flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-orange-600 ml-4 shrink-0"></div>
-                            <p><span class="font-bold text-lg">5% خزينة طوارئ:</span> لمواجهة المخاطر غير المتوقعة وضمان الاستقرار.</p>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #86efac;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">5% - العمليات والتطوير</p>
+                            <p class="text-gray-600">($125,000) لضمان جاهزية البنية التحتية التقنية لاستيعاب النمو المتوقع.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="roadmap" class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="text-4xl font-bold">خارطة الطريق: من الإطلاق إلى الريادة</h2>
-                    <p class="text-lg text-gray-400 mt-2">خطتنا واضحة ومراحلها محددة لتحقيق رؤيتنا الطموحة.</p>
+        <!-- The Offer Section -->
+        <section class="reveal mb-20">
+            <h2 class="section-title text-center text-gray-900 mb-10">العرض الاستثماري المفصّل</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl me-4">🛍️</span>
+                        <h3 class="gradient-text text-2xl font-bold">1. حصة في ملكية متجر CHEASY</h3>
+                    </div>
+                    <p class="mb-4 text-gray-700">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من صافي أرباح متجر CHEASY</span>.</p>
+                    <div class="space-y-3 text-sm border-t border-gray-200 pt-4 mt-4">
+                       <p class="font-semibold text-gray-900">يتم توزيع صافي أرباح المتجر كالتالي:</p>
+                       <ul class="list-disc list-inside text-gray-600 space-y-2">
+                           <li><span class="font-bold text-green-700">25%</span> لإعادة الشراء والحرق (Buyback & Burn)</li>
+                           <li><span class="font-bold text-green-700">25%</span> للتطوير والبحث</li>
+                           <li><span class="font-bold text-green-700">25%</span> للتسويق ونمو المستخدمين</li>
+                           <li><span class="font-bold text-green-700">25%</span> لملاك المتجر (حصتكم 30% منها)</li>
+                       </ul>
+                    </div>
                 </div>
-                <div class="max-w-3xl mx-auto relative timeline">
-                    <div class="mb-12 relative pr-10 timeline-item reveal">
-                         <div class="glass-card p-6">
-                            <p class="text-sm text-[#FDB813] mb-1">المرحلة 1 (الأيام 0 - 180)</p>
-                            <h3 class="text-xl font-bold mb-2">التأسيس والتحقق</h3>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>إطلاق متجر MVP بفئات أبطال محددة.</li>
-                                <li>تفعيل Cashback والخصومات الطبقية الفورية.</li>
-                                <li>إدراج عام على DEX وقفل السيولة لمدة 12 شهرًا.</li>
-                                <li>نشر أول تقرير شفافية وإجراء أول عملية Buyback & Burn.</li>
-                            </ul>
-                         </div>
+                 <div class="card p-8">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl me-4">💰</span>
+                        <h3 class="gradient-text text-2xl font-bold">2. حصة من عوائد الطرح الأولي (ICO)</h3>
                     </div>
-                    <div class="mb-12 relative pr-10 timeline-item reveal">
-                         <div class="glass-card p-6">
-                            <p class="text-sm text-[#FDB813] mb-1">المرحلة 2 (6 - 12 شهرًا)</p>
-                            <h3 class="text-xl font-bold mb-2">بناء المشاركة العميقة</h3>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>إطلاق "مؤشر الولاء الديناميكي" (Living NFTs).</li>
-                                <li>تفعيل برنامج "الشراكة في البيانات" الطوعي.</li>
-                                <li>نشر تقرير يوضح أثر البيانات على قرارات المتجر.</li>
-                            </ul>
-                         </div>
-                    </div>
-                    <div class="mb-12 relative pr-10 timeline-item reveal">
-                         <div class="glass-card p-6">
-                            <p class="text-sm text-[#FDB813] mb-1">المرحلة 3 (12 - 24 شهرًا)</p>
-                            <h3 class="text-xl font-bold mb-2">التوسع في الإبداع</h3>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>إطلاق "منصة الإبداع المجتمعي" للمصممين والمصنعين.</li>
-                                <li>تمويل وتصنيع أول منتج من اختيار المجتمع.</li>
-                                <li>إطلاق النسخة الأولية من حاضنة العلامات التجارية.</li>
-                            </ul>
-                         </div>
-                    </div>
-                     <div class="relative pr-10 timeline-item reveal">
-                         <div class="glass-card p-6">
-                            <p class="text-sm text-[#FDB813] mb-1">المرحلة 4 (24 شهرًا فما بعد)</p>
-                            <h3 class="text-xl font-bold mb-2">البنية التحتية اللامركزية</h3>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>إطلاق مشروع "اللوجستيات التشاركية" التجريبي.</li>
-                                <li>توسيع بوابة CheasyPay لتصبح منتج B2B عالمي.</li>
-                                <li>تحقيق منظومة تجارية لامركزية بالكامل.</li>
-                            </ul>
-                         </div>
+                    <p class="mb-4 text-gray-700">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من العوائد القابلة للتوزيع</span> بعد تمويل خزينة المشروع.</p>
+                    <div class="border-t border-gray-200 pt-4 mt-4">
+                        <p class="font-semibold text-gray-900 mb-3">مثال توضيحي (على أساس جمع 30 مليون دولار):</p>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p>إجمالي العوائد: <span class="font-mono text-gray-800 float-left">$30,000,000</span></p>
+                            <p>تمويل خزينة المشروع (30%): <span class="font-mono text-gray-800 float-left">-$9,000,000</span></p>
+                            <hr class="border-gray-300 my-1">
+                            <p class="font-semibold">المبلغ القابل للتوزيع: <span class="font-mono text-gray-800 float-left">$21,000,000</span></p>
+                            <p class="font-bold text-green-600 mt-2">حصتكم (30% من المبلغ): <span class="font-mono text-lg text-green-600 float-left">$6,300,000</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="vision" class="py-20 bg-black/20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold">رؤيتنا: أسس مشروع القرن</h2>
-                    <p class="text-lg text-gray-400 mt-2">نحن لا نبني متجراً، بل نعيد صياغة العلاقة بين التجارة والمجتمع.</p>
+        <!-- Tokenomics Section -->
+         <section class="reveal card p-8 md:p-12 mb-20">
+            <h2 class="section-title text-center text-gray-900 mb-10">اقتصاديات عملة $CHEASY</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 space-y-6">
+                     <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #16a34a;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">40% - التسويق وبناء المجتمع</p>
+                            <p class="text-gray-600">لحملات الإحالة، المنح، وتوسيع قاعدة المستخدمين.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #22c55e;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">30% - الطرح الأولي للعملة (ICO)</p>
+                            <p class="text-gray-600">لجمع التمويل اللازم للإطلاق والتوسع.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #4ade80;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">15% - الفريق</p>
+                            <p class="text-gray-600">مع فترة حجز لضمان الالتزام طويل الأمد.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #86efac;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">10% - السيولة</p>
+                            <p class="text-gray-600">لضمان سهولة التداول عند الإدراج في المنصات.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #bbf7d0;"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-xl">5% - طوارئ</p>
+                            <p class="text-gray-600">لمواجهة المخاطر غير المتوقعة وضمان الاستقرار.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <div class="section-gradient p-8 text-center reveal" style="transition-delay: 100ms;">
-                        <div class="w-20 h-20 bg-[#FDB813]/10 border-2 border-[#FDB813] rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="share-2" class="w-10 h-10 text-[#FDB813]"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">الشراكة في البيانات</h3>
-                        <p class="text-gray-300">بياناتك أصولك، وأنت الشريك. بدلاً من استغلال بياناتك، نكافئك على مشاركتها طواعيةً لبناء قرارات تجارية أذكى تعود بالنفع على الجميع.</p>
-                    </div>
-                    <div class="section-gradient p-8 text-center reveal" style="transition-delay: 200ms;">
-                         <div class="w-20 h-20 bg-[#FDB813]/10 border-2 border-[#FDB813] rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="factory" class="w-10 h-10 text-[#FDB813]"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">التصنيع اللامركزي</h3>
-                        <p class="text-gray-300">من فكرة إلى منتج. يموله ويملكه المجتمع. عبر منصة الإبداع، يقرر المجتمع المنتجات القادمة ويمولها، ليشارك في أرباح نجاحها.</p>
-                    </div>
-                    <div class="section-gradient p-8 text-center reveal" style="transition-delay: 300ms;">
-                         <div class="w-20 h-20 bg-[#FDB813]/10 border-2 border-[#FDB813] rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="waypoints" class="w-10 h-10 text-[#FDB813]"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">اللوجستيات التشاركية</h3>
-                        <p class="text-gray-300">شبكة توزيع فائقة السرعة، يديرها أبطال مجتمعنا. نحن نبني شبكة من نقاط التخزين المحلية يديرها أفراد المجتمع، مما يسرّع الشحن ويخلق دخلاً جديداً لهم.</p>
+                <div class="order-1 md:order-2 chart-container">
+                    <div class="chart" style="background-image: conic-gradient(from 0deg, #16a34a 0% 40%, #22c55e 40% 70%, #4ade80 70% 85%, #86efac 85% 95%, #bbf7d0 95% 100%);"></div>
+                    <div class="chart-label">
+                        <p class="text-gray-700 text-lg">المعروض الكلي</p>
+                        <p class="text-gray-900 text-4xl font-bold">1B</p>
+                        <p class="gradient-text font-bold text-lg">$CHEASY</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="team" class="py-20">
-             <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold">الفريق المؤسس</h2>
-                    <p class="text-lg text-gray-400 mt-2">مزيج من الخبرة في التجارة الإلكترونية، البلوك تشين، والتسويق الرقمي.</p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-10">
-                    <div class="text-center reveal">
-                        <img src="https://placehold.co/128x128/1A1A2E/FFFFFF?text=HG" alt="صورة حمدان الغامدي" class="rounded-full mx-auto mb-4 border-4 border-gray-700">
-                        <h4 class="text-xl font-bold">حمدان الغامدي</h4>
-                        <p class="text-[#FDB813]">الرئيس التنفيذي (CEO)</p>
-                    </div>
-                     <div class="text-center reveal">
-                        <img src="https://placehold.co/128x128/1A1A2E/FFFFFF?text=COO" alt="صورة مدير العمليات" class="rounded-full mx-auto mb-4 border-4 border-gray-700">
-                        <h4 class="text-xl font-bold">اسم العضو</h4>
-                        <p class="text-[#FDB813]">مدير العمليات (COO)</p>
-                    </div>
-                     <div class="text-center reveal">
-                        <img src="https://placehold.co/128x128/1A1A2E/FFFFFF?text=CTO" alt="صورة المدير التقني" class="rounded-full mx-auto mb-4 border-4 border-gray-700">
-                        <h4 class="text-xl font-bold">اسم العضو</h4>
-                        <p class="text-[#FDB813]">المدير التقني (CTO)</p>
-                    </div>
-                     <div class="text-center reveal">
-                        <img src="https://placehold.co/128x128/1A1A2E/FFFFFF?text=CMO" alt="صورة مدير التسويق" class="rounded-full mx-auto mb-4 border-4 border-gray-700">
-                        <h4 class="text-xl font-bold">اسم العضو</h4>
-                        <p class="text-[#FDB813]">مدير التسويق (CMO)</p>
-                    </div>
-                </div>
-             </div>
         </section>
 
     </main>
     
-    <footer class="bg-black/40 py-12">
-        <div class="container mx-auto px-4 text-center">
-             <h2 class="text-3xl font-bold mb-4">كن جزءاً من مستقبل التجارة.</h2>
-             <p class="text-gray-300 mb-8 max-w-xl mx-auto">انضم إلى مجتمعنا اليوم وتابع تطورات المشروع وكن أول من يعرف بفرص الاستثمار والمشاركة.</p>
-             <a href="#" class="shiny-button text-black font-bold py-3 px-8 rounded-lg text-lg">انضم إلى قناتنا على تيليجرام</a>
-
-             <div class="flex justify-center space-x-reverse space-x-6 mt-10 mb-8">
-                 <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                 <a href="#" class="text-gray-400 hover:text-white" aria-label="Telegram"><i data-lucide="send" class="w-6 h-6"></i></a>
-                 <a href="mailto:support@cheasy.finance" class="text-gray-400 hover:text-white" aria-label="Email Support"><i data-lucide="mail" class="w-6 h-6"></i></a>
-             </div>
-             <p class="text-sm text-gray-500">
-                 &copy; 2025 CHEASY. جميع الحقوق محفوظة. <br>
-                 <a href="mailto:support@cheasy.finance" class="hover:text-white">support@cheasy.finance</a><br>
-                 <span class="mt-2 block">إخلاء مسؤولية: هذا المستند لأغراض معلوماتية فقط ولا يُعد عرضًا أو توصية استثمارية. الاستثمار في العملات الرقمية ينطوي على مخاطر عالية.</span>
+    <!-- Footer CTA -->
+    <footer class="py-16">
+        <div class="reveal container mx-auto px-6 text-center">
+             <h2 class="section-title text-gray-900 mb-4">هل أنت مستعد لتكون جزءاً من المستقبل؟</h2>
+             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                 نحن على ثقة بأن CHEASY يمثل فرصة استثنائية ليكون أحد المشاريع الرائدة في الجيل القادم من التجارة. انضم إلينا في هذه الرحلة.
              </p>
+             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                 <a href="#" class="btn-primary w-full sm:w-auto">تحميل العرض التقديمي (Pitch Deck)</a>
+                 <a href="#" class="bg-gray-200 text-gray-800 font-bold rounded-lg px-6 py-3 w-full sm:w-auto hover:bg-gray-300 transition-colors">قراءة الورقة البيضاء (Whitepaper)</a>
+             </div>
         </div>
     </footer>
 
-
     <script>
-        lucide.createIcons();
+        // Simple reveal on scroll animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal');
 
-        // Simple scroll reveal animation
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            const windowHeight = window.innerHeight;
-            revealElements.forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) {
-                    el.classList.add('visible');
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
             });
-        };
 
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Trigger on load
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
 </html>
+
+
