@@ -8,11 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Tajawal', 'Inter', sans-serif;
             background-color: #f9fafb; /* Light Gray */
             color: #1f2937; /* Dark Gray */
+        }
+        html[lang="en"] body {
+            font-family: 'Inter', 'Tajawal', sans-serif;
         }
         .gradient-text {
             background: linear-gradient(90deg, #15803d, #22c55e);
@@ -38,6 +42,7 @@
             border-radius: 8px;
             padding: 12px 24px;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
         }
         .btn-primary:hover {
             background-color: #15803d; /* Green-700 */
@@ -88,15 +93,29 @@
     </style>
 </head>
 <body class="antialiased">
+    
+    <!-- Store Link -->
+    <div class="bg-green-800 text-white p-3 text-center font-bold shadow-lg">
+        <a href="https://store.cheasy.finance" target="_blank" class="hover:underline" data-lang="storeLink">
+            تفضل بزيارة متجرنا! انقر هنا للانتقال إلى store.cheasy.finance
+        </a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-5 right-5 z-20">
+        <button id="lang-switcher" class="bg-white/30 backdrop-blur-md text-gray-800 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-white/50 transition-all">
+            English
+        </button>
+    </div>
 
     <!-- Header and Hero Section -->
     <header class="py-12 md:py-20">
         <div class="container mx-auto px-6 text-center">
-            <span class="pill">فرصة استثمارية حصرية</span>
-            <h1 class="gradient-text text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+            <span class="pill" data-lang="pill">فرصة استثمارية حصرية</span>
+            <h1 class="gradient-text text-4xl md:text-6xl font-extrabold my-4 leading-tight" data-lang="heroTitle">
                 تمويل جولة أولية بقيمة 2.5 مليون دولار لمشروع CHEASY
             </h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 mt-4">
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 mt-4" data-lang="heroSubtitle">
                 لإعادة تعريف التجارة الإلكترونية العالمية عبر دمج قوة الويب 3.0 مع تجارة التجزئة الذكية وبناء منظومة اقتصادية متكاملة ومملوكة لمجتمعها.
             </p>
         </div>
@@ -107,15 +126,15 @@
         <!-- Key Metrics Section -->
         <section class="reveal grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <div class="card p-6 text-center">
-                <h3 class="text-gray-500 text-lg">الطلب الاستثماري</h3>
+                <h3 class="text-gray-500 text-lg" data-lang="investmentAsk">الطلب الاستثماري</h3>
                 <p class="gradient-text text-4xl font-bold mt-2">$2,500,000</p>
             </div>
             <div class="card p-6 text-center">
-                <h3 class="text-gray-500 text-lg">الجولة</h3>
-                <p class="text-gray-900 text-4xl font-bold mt-2">تمويل أولي (Seed)</p>
+                <h3 class="text-gray-500 text-lg" data-lang="round">الجولة</h3>
+                <p class="text-gray-900 text-4xl font-bold mt-2" data-lang="seedRound">تمويل أولي (Seed)</p>
             </div>
             <div class="card p-6 text-center">
-                <h3 class="text-gray-500 text-lg">هدف الطرح الأولي للعملة</h3>
+                <h3 class="text-gray-500 text-lg" data-lang="icoGoal">هدف الطرح الأولي للعملة</h3>
                 <p class="gradient-text text-4xl font-bold mt-2">$30,000,000</p>
             </div>
         </section>
@@ -124,14 +143,14 @@
         <section class="reveal mb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="card p-8">
-                    <h2 class="section-title text-gray-900 mb-4">المشكلة</h2>
-                    <p class="text-gray-700 leading-relaxed">
+                    <h2 class="section-title text-gray-900 mb-4" data-lang="problemTitle">المشكلة</h2>
+                    <p class="text-gray-700 leading-relaxed" data-lang="problemText">
                         يعاني سوق التجارة الإلكترونية الحالي من تآكل هوامش الربح بسبب المنافسة الشرسة، ضعف ولاء العملاء، والاستغلال غير العادل لبياناتهم. هذه المشاكل تحد من النمو وتخلق علاقة غير مستدامة بين التاجر والمستهلك.
                     </p>
                 </div>
                 <div class="card p-8 border-green-600 border-2">
-                    <h2 class="section-title gradient-text mb-4">الحل الذي نقدمه</h2>
-                    <p class="text-gray-700 leading-relaxed">
+                    <h2 class="section-title gradient-text mb-4" data-lang="solutionTitle">الحل الذي نقدمه</h2>
+                    <p class="text-gray-700 leading-relaxed" data-lang="solutionText">
                         CHEASY يقدم حلاً شاملاً عبر منظومة اقتصادية يكون فيها العميل هو الشريك والمستفيد الأول. من خلال عملتنا الرقمية $CHEASY، نُفعّل آليات مبتكرة مثل الاسترداد النقدي الفوري، ونظام "الشراء والحرق" لزيادة قيمة العملة، ومنصة إبداع يشارك فيها المجتمع.
                     </p>
                 </div>
@@ -140,42 +159,42 @@
         
         <!-- Use of Proceeds Section -->
         <section class="reveal card p-8 md:p-12 mb-20">
-            <h2 class="section-title text-center text-gray-900 mb-10">خطة استخدام التمويل</h2>
+            <h2 class="section-title text-center text-gray-900 mb-10" data-lang="useOfFundsTitle">خطة استخدام التمويل</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="chart-container">
                     <div class="chart" style="background-image: conic-gradient(from 0deg, #16a34a 0% 60%, #22c55e 60% 85%, #4ade80 85% 95%, #86efac 95% 100%);"></div>
                     <div class="chart-label">
-                        <p class="text-gray-700 text-lg">إجمالي التمويل</p>
+                        <p class="text-gray-700 text-lg" data-lang="totalFunding">إجمالي التمويل</p>
                         <p class="text-gray-900 text-4xl font-bold">$2.5M</p>
                     </div>
                 </div>
                 <div class="space-y-6">
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #16a34a;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #16a34a;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">60% - التسويق والعلاقات العامة</p>
-                            <p class="text-gray-600">($1,500,000) للتعاقد مع كبار المؤثرين، الظهور الإعلامي، والحملات الإعلانية العالمية.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="useOfFunds1Title">60% - التسويق والعلاقات العامة</p>
+                            <p class="text-gray-600" data-lang="useOfFunds1Text">($1,500,000) للتعاقد مع كبار المؤثرين، الظهور الإعلامي، والحملات الإعلانية العالمية.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #22c55e;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #22c55e;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">25% - بناء وتوسيع المجتمع</p>
-                            <p class="text-gray-600">($625,000) لتنمية مجتمعاتنا على Telegram و Discord وإطلاق برامج المكافآت.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="useOfFunds2Title">25% - بناء وتوسيع المجتمع</p>
+                            <p class="text-gray-600" data-lang="useOfFunds2Text">($625,000) لتنمية مجتمعاتنا على Telegram و Discord وإطلاق برامج المكافآت.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #4ade80;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #4ade80;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">10% - الشراكات الاستراتيجية</p>
-                            <p class="text-gray-600">($250,000) للدخول في شراكات مع مشاريع Web3 ومنصات إطلاق (Launchpads).</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="useOfFunds3Title">10% - الشراكات الاستراتيجية</p>
+                            <p class="text-gray-600" data-lang="useOfFunds3Text">($250,000) للدخول في شراكات مع مشاريع Web3 ومنصات إطلاق (Launchpads).</p>
                         </div>
                     </div>
                      <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #86efac;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #86efac;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">5% - العمليات والتطوير</p>
-                            <p class="text-gray-600">($125,000) لضمان جاهزية البنية التحتية التقنية لاستيعاب النمو المتوقع.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="useOfFunds4Title">5% - العمليات والتطوير</p>
+                            <p class="text-gray-600" data-lang="useOfFunds4Text">($125,000) لضمان جاهزية البنية التحتية التقنية لاستيعاب النمو المتوقع.</p>
                         </div>
                     </div>
                 </div>
@@ -184,38 +203,38 @@
 
         <!-- The Offer Section -->
         <section class="reveal mb-20">
-            <h2 class="section-title text-center text-gray-900 mb-10">العرض الاستثماري المفصّل</h2>
+            <h2 class="section-title text-center text-gray-900 mb-10" data-lang="offerTitle">العرض الاستثماري المفصّل</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="card p-8">
                     <div class="flex items-center mb-4">
                         <span class="text-3xl me-4">🛍️</span>
-                        <h3 class="gradient-text text-2xl font-bold">1. حصة في ملكية متجر CHEASY</h3>
+                        <h3 class="gradient-text text-2xl font-bold" data-lang="offer1Title">1. حصة في ملكية متجر CHEASY</h3>
                     </div>
-                    <p class="mb-4 text-gray-700">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من صافي أرباح متجر CHEASY</span>.</p>
+                    <p class="mb-4 text-gray-700" data-lang="offer1Text">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من صافي أرباح متجر CHEASY</span>.</p>
                     <div class="space-y-3 text-sm border-t border-gray-200 pt-4 mt-4">
-                       <p class="font-semibold text-gray-900">يتم توزيع صافي أرباح المتجر كالتالي:</p>
+                       <p class="font-semibold text-gray-900" data-lang="offer1DistributionTitle">يتم توزيع صافي أرباح المتجر كالتالي:</p>
                        <ul class="list-disc list-inside text-gray-600 space-y-2">
-                           <li><span class="font-bold text-green-700">25%</span> لإعادة الشراء والحرق (Buyback & Burn)</li>
-                           <li><span class="font-bold text-green-700">25%</span> للتطوير والبحث</li>
-                           <li><span class="font-bold text-green-700">25%</span> للتسويق ونمو المستخدمين</li>
-                           <li><span class="font-bold text-green-700">25%</span> لملاك المتجر (حصتكم 30% منها)</li>
+                           <li data-lang="offer1Dist1"><span class="font-bold text-green-700">25%</span> لإعادة الشراء والحرق (Buyback & Burn)</li>
+                           <li data-lang="offer1Dist2"><span class="font-bold text-green-700">25%</span> للتطوير والبحث</li>
+                           <li data-lang="offer1Dist3"><span class="font-bold text-green-700">25%</span> للتسويق ونمو المستخدمين</li>
+                           <li data-lang="offer1Dist4"><span class="font-bold text-green-700">25%</span> لملاك المتجر (حصتكم 30% منها)</li>
                        </ul>
                     </div>
                 </div>
                  <div class="card p-8">
                     <div class="flex items-center mb-4">
                         <span class="text-3xl me-4">💰</span>
-                        <h3 class="gradient-text text-2xl font-bold">2. حصة من عوائد الطرح الأولي (ICO)</h3>
+                        <h3 class="gradient-text text-2xl font-bold" data-lang="offer2Title">2. حصة من عوائد الطرح الأولي (ICO)</h3>
                     </div>
-                    <p class="mb-4 text-gray-700">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من العوائد القابلة للتوزيع</span> بعد تمويل خزينة المشروع.</p>
+                    <p class="mb-4 text-gray-700" data-lang="offer2Text">يحصل المستثمر على حصة تبلغ <span class="font-bold text-gray-900">30% من العوائد القابلة للتوزيع</span> بعد تمويل خزينة المشروع.</p>
                     <div class="border-t border-gray-200 pt-4 mt-4">
-                        <p class="font-semibold text-gray-900 mb-3">مثال توضيحي (على أساس جمع 30 مليون دولار):</p>
+                        <p class="font-semibold text-gray-900 mb-3" data-lang="offer2ExampleTitle">مثال توضيحي (على أساس جمع 30 مليون دولار):</p>
                         <div class="space-y-2 text-sm text-gray-600">
-                            <p>إجمالي العوائد: <span class="font-mono text-gray-800 float-left">$30,000,000</span></p>
-                            <p>تمويل خزينة المشروع (30%): <span class="font-mono text-gray-800 float-left">-$9,000,000</span></p>
+                            <p><span data-lang="offer2TotalRevenue">إجمالي العوائد:</span> <span class="font-mono text-gray-800 float-left">$30,000,000</span></p>
+                            <p><span data-lang="offer2TreasuryFunding">تمويل خزينة المشروع (30%):</span> <span class="font-mono text-gray-800 float-left">-$9,000,000</span></p>
                             <hr class="border-gray-300 my-1">
-                            <p class="font-semibold">المبلغ القابل للتوزيع: <span class="font-mono text-gray-800 float-left">$21,000,000</span></p>
-                            <p class="font-bold text-green-600 mt-2">حصتكم (30% من المبلغ): <span class="font-mono text-lg text-green-600 float-left">$6,300,000</span></p>
+                            <p class="font-semibold"><span data-lang="offer2DistributableAmount">المبلغ القابل للتوزيع:</span> <span class="font-mono text-gray-800 float-left">$21,000,000</span></p>
+                            <p class="font-bold text-green-600 mt-2"><span data-lang="offer2YourShare">حصتكم (30% من المبلغ):</span> <span class="font-mono text-lg text-green-600 float-left">$6,300,000</span></p>
                         </div>
                     </div>
                 </div>
@@ -224,49 +243,49 @@
 
         <!-- Tokenomics Section -->
          <section class="reveal card p-8 md:p-12 mb-20">
-            <h2 class="section-title text-center text-gray-900 mb-10">اقتصاديات عملة $CHEASY</h2>
+            <h2 class="section-title text-center text-gray-900 mb-10" data-lang="tokenomicsTitle">اقتصاديات عملة $CHEASY</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1 space-y-6">
                      <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #16a34a;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #16a34a;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">40% - التسويق وبناء المجتمع</p>
-                            <p class="text-gray-600">لحملات الإحالة، المنح، وتوسيع قاعدة المستخدمين.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="tokenomics1Title">40% - التسويق وبناء المجتمع</p>
+                            <p class="text-gray-600" data-lang="tokenomics1Text">لحملات الإحالة، المنح، وتوسيع قاعدة المستخدمين.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #22c55e;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #22c55e;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">30% - الطرح الأولي للعملة (ICO)</p>
-                            <p class="text-gray-600">لجمع التمويل اللازم للإطلاق والتوسع.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="tokenomics2Title">30% - الطرح الأولي للعملة (ICO)</p>
+                            <p class="text-gray-600" data-lang="tokenomics2Text">لجمع التمويل اللازم للإطلاق والتوسع.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #4ade80;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #4ade80;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">15% - الفريق</p>
-                            <p class="text-gray-600">مع فترة حجز لضمان الالتزام طويل الأمد.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="tokenomics3Title">15% - الفريق</p>
+                            <p class="text-gray-600" data-lang="tokenomics3Text">مع فترة حجز لضمان الالتزام طويل الأمد.</p>
                         </div>
                     </div>
                      <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #86efac;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #86efac;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">10% - السيولة</p>
-                            <p class="text-gray-600">لضمان سهولة التداول عند الإدراج في المنصات.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="tokenomics4Title">10% - السيولة</p>
+                            <p class="text-gray-600" data-lang="tokenomics4Text">لضمان سهولة التداول عند الإدراج في المنصات.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="w-4 h-4 rounded-full mt-1.5 me-4" style="background-color: #bbf7d0;"></div>
+                        <div class="w-4 h-4 rounded-full mt-1.5 me-4 flex-shrink-0" style="background-color: #bbf7d0;"></div>
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">5% - طوارئ</p>
-                            <p class="text-gray-600">لمواجهة المخاطر غير المتوقعة وضمان الاستقرار.</p>
+                            <p class="font-bold text-gray-900 text-xl" data-lang="tokenomics5Title">5% - طوارئ</p>
+                            <p class="text-gray-600" data-lang="tokenomics5Text">لمواجهة المخاطر غير المتوقعة وضمان الاستقرار.</p>
                         </div>
                     </div>
                 </div>
                 <div class="order-1 md:order-2 chart-container">
                     <div class="chart" style="background-image: conic-gradient(from 0deg, #16a34a 0% 40%, #22c55e 40% 70%, #4ade80 70% 85%, #86efac 85% 95%, #bbf7d0 95% 100%);"></div>
                     <div class="chart-label">
-                        <p class="text-gray-700 text-lg">المعروض الكلي</p>
+                        <p class="text-gray-700 text-lg" data-lang="totalSupply">المعروض الكلي</p>
                         <p class="text-gray-900 text-4xl font-bold">1B</p>
                         <p class="gradient-text font-bold text-lg">$CHEASY</p>
                     </div>
@@ -279,13 +298,13 @@
     <!-- Footer CTA -->
     <footer class="py-16">
         <div class="reveal container mx-auto px-6 text-center">
-             <h2 class="section-title text-gray-900 mb-4">هل أنت مستعد لتكون جزءاً من المستقبل؟</h2>
-             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+             <h2 class="section-title text-gray-900 mb-4" data-lang="footerTitle">هل أنت مستعد لتكون جزءاً من المستقبل؟</h2>
+             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8" data-lang="footerSubtitle">
                  نحن على ثقة بأن CHEASY يمثل فرصة استثنائية ليكون أحد المشاريع الرائدة في الجيل القادم من التجارة. انضم إلينا في هذه الرحلة.
              </p>
              <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                 <a href="#" class="btn-primary w-full sm:w-auto">تحميل العرض التقديمي (Pitch Deck)</a>
-                 <a href="#" class="bg-gray-200 text-gray-800 font-bold rounded-lg px-6 py-3 w-full sm:w-auto hover:bg-gray-300 transition-colors">قراءة الورقة البيضاء (Whitepaper)</a>
+                 <a href="mailto:invest@cheasy.finance" class="btn-primary w-full sm:w-auto" data-lang="pitchDeckBtn">لطلب العرض التقديمي (Pitch Deck)</a>
+                 <a href="Media/docs/الورقة البيضاء الاستثمارية_ مشروع _تشيزي_ (Cheasy).pdf" target="_blank" class="bg-gray-200 text-gray-800 font-bold rounded-lg px-6 py-3 w-full sm:w-auto hover:bg-gray-300 transition-colors" data-lang="whitepaperBtn">تحميل الورقة البيضاء (Whitepaper)</a>
              </div>
         </div>
     </footer>
@@ -310,8 +329,155 @@
                 observer.observe(el);
             });
         });
+
+        // Language translation script
+        const translations = {
+            en: {
+                storeLink: "Visit our store! Click here to go to store.cheasy.finance",
+                pill: "Exclusive Investment Opportunity",
+                heroTitle: "Seed Round Funding of $2.5 Million for the CHEASY Project",
+                heroSubtitle: "To redefine global e-commerce by integrating the power of Web 3.0 with smart retail and building an integrated economic ecosystem owned by its community.",
+                investmentAsk: "Investment Ask",
+                round: "Round",
+                seedRound: "Seed Round",
+                icoGoal: "ICO Goal",
+                problemTitle: "The Problem",
+                problemText: "The current e-commerce market suffers from eroding profit margins due to fierce competition, weak customer loyalty, and unfair use of their data. These problems limit growth and create an unsustainable relationship between merchants and consumers.",
+                solutionTitle: "Our Solution",
+                solutionText: "CHEASY offers a comprehensive solution through an economic ecosystem where the customer is the primary partner and beneficiary. Through our digital currency $CHEASY, we enable innovative mechanisms like instant cashback, a 'Buy & Burn' system to increase the currency's value, and a community-driven creation platform.",
+                useOfFundsTitle: "Use of Funds Plan",
+                totalFunding: "Total Funding",
+                useOfFunds1Title: "60% - Marketing & PR",
+                useOfFunds1Text: "($1,500,000) for contracting with top influencers, media appearances, and global advertising campaigns.",
+                useOfFunds2Title: "25% - Community Building & Expansion",
+                useOfFunds2Text: "($625,000) to grow our communities on Telegram and Discord and launch reward programs.",
+                useOfFunds3Title: "10% - Strategic Partnerships",
+                useOfFunds3Text: "($250,000) to enter into partnerships with Web3 projects and launchpads.",
+                useOfFunds4Title: "5% - Operations & Development",
+                useOfFunds4Text: "($125,000) to ensure the technical infrastructure is ready to accommodate the expected growth.",
+                offerTitle: "Detailed Investment Offer",
+                offer1Title: "1. Stake in CHEASY Store Ownership",
+                offer1Text: "The investor receives a share of <span class='font-bold text-gray-900'>30% of the net profits of the CHEASY store</span>.",
+                offer1DistributionTitle: "The store's net profits are distributed as follows:",
+                offer1Dist1: "<span class='font-bold text-green-700'>25%</span> for Buyback & Burn",
+                offer1Dist2: "<span class='font-bold text-green-700'>25%</span> for Development & Research",
+                offer1Dist3: "<span class='font-bold text-green-700'>25%</span> for Marketing & User Growth",
+                offer1Dist4: "<span class='font-bold text-green-700'>25%</span> to Store Owners (your share is 30% of this)",
+                offer2Title: "2. Share of ICO Proceeds",
+                offer2Text: "The investor receives a share of <span class='font-bold text-gray-900'>30% of the distributable proceeds</span> after funding the project treasury.",
+                offer2ExampleTitle: "Illustrative Example (based on raising $30 million):",
+                offer2TotalRevenue: "Total Revenue:",
+                offer2TreasuryFunding: "Project Treasury Funding (30%):",
+                offer2DistributableAmount: "Distributable Amount:",
+                offer2YourShare: "Your Share (30% of the amount):",
+                tokenomicsTitle: "Tokenomics of $CHEASY",
+                tokenomics1Title: "40% - Marketing & Community",
+                tokenomics1Text: "For referral campaigns, grants, and expanding the user base.",
+                tokenomics2Title: "30% - Initial Coin Offering (ICO)",
+                tokenomics2Text: "To raise the necessary funding for launch and expansion.",
+                tokenomics3Title: "15% - Team",
+                tokenomics3Text: "With a vesting period to ensure long-term commitment.",
+                tokenomics4Title: "10% - Liquidity",
+                tokenomics4Text: "To ensure easy trading upon listing on exchanges.",
+                tokenomics5Title: "5% - Emergency",
+                tokenomics5Text: "To address unforeseen risks and ensure stability.",
+                totalSupply: "Total Supply",
+                footerTitle: "Are you ready to be part of the future?",
+                footerSubtitle: "We are confident that CHEASY represents an exceptional opportunity to be one of the leading projects in the next generation of commerce. Join us on this journey.",
+                pitchDeckBtn: "Request Pitch Deck",
+                whitepaperBtn: "Download Whitepaper",
+            },
+            ar: {
+                storeLink: "تفضل بزيارة متجرنا! انقر هنا للانتقال إلى store.cheasy.finance",
+                pill: "فرصة استثمارية حصرية",
+                heroTitle: "تمويل جولة أولية بقيمة 2.5 مليون دولار لمشروع CHEASY",
+                heroSubtitle: "لإعادة تعريف التجارة الإلكترونية العالمية عبر دمج قوة الويب 3.0 مع تجارة التجزئة الذكية وبناء منظومة اقتصادية متكاملة ومملوكة لمجتمعها.",
+                investmentAsk: "الطلب الاستثماري",
+                round: "الجولة",
+                seedRound: "تمويل أولي (Seed)",
+                icoGoal: "هدف الطرح الأولي للعملة",
+                problemTitle: "المشكلة",
+                problemText: "يعاني سوق التجارة الإلكترونية الحالي من تآكل هوامش الربح بسبب المنافسة الشرسة، ضعف ولاء العملاء، والاستغلال غير العادل لبياناتهم. هذه المشاكل تحد من النمو وتخلق علاقة غير مستدامة بين التاجر والمستهلك.",
+                solutionTitle: "الحل الذي نقدمه",
+                solutionText: "CHEASY يقدم حلاً شاملاً عبر منظومة اقتصادية يكون فيها العميل هو الشريك والمستفيد الأول. من خلال عملتنا الرقمية $CHEASY، نُفعّل آليات مبتكرة مثل الاسترداد النقدي الفوري، ونظام \"الشراء والحرق\" لزيادة قيمة العملة، ومنصة إبداع يشارك فيها المجتمع.",
+                useOfFundsTitle: "خطة استخدام التمويل",
+                totalFunding: "إجمالي التمويل",
+                useOfFunds1Title: "60% - التسويق والعلاقات العامة",
+                useOfFunds1Text: "($1,500,000) للتعاقد مع كبار المؤثرين، الظهور الإعلامي، والحملات الإعلانية العالمية.",
+                useOfFunds2Title: "25% - بناء وتوسيع المجتمع",
+                useOfFunds2Text: "($625,000) لتنمية مجتمعاتنا على Telegram و Discord وإطلاق برامج المكافآت.",
+                useOfFunds3Title: "10% - الشراكات الاستراتيجية",
+                useOfFunds3Text: "($250,000) للدخول في شراكات مع مشاريع Web3 ومنصات إطلاق (Launchpads).",
+                useOfFunds4Title: "5% - العمليات والتطوير",
+                useOfFunds4Text: "($125,000) لضمان جاهزية البنية التحتية التقنية لاستيعاب النمو المتوقع.",
+                offerTitle: "العرض الاستثماري المفصّل",
+                offer1Title: "1. حصة في ملكية متجر CHEASY",
+                offer1Text: "يحصل المستثمر على حصة تبلغ <span class='font-bold text-gray-900'>30% من صافي أرباح متجر CHEASY</span>.",
+                offer1DistributionTitle: "يتم توزيع صافي أرباح المتجر كالتالي:",
+                offer1Dist1: "<span class='font-bold text-green-700'>25%</span> لإعادة الشراء والحرق (Buyback & Burn)",
+                offer1Dist2: "<span class='font-bold text-green-700'>25%</span> للتطوير والبحث",
+                offer1Dist3: "<span class='font-bold text-green-700'>25%</span> للتسويق ونمو المستخدمين",
+                offer1Dist4: "<span class='font-bold text-green-700'>25%</span> لملاك المتجر (حصتكم 30% منها)",
+                offer2Title: "2. حصة من عوائد الطرح الأولي (ICO)",
+                offer2Text: "يحصل المستثمر على حصة تبلغ <span class='font-bold text-gray-900'>30% من العوائد القابلة للتوزيع</span> بعد تمويل خزينة المشروع.",
+                offer2ExampleTitle: "مثال توضيحي (على أساس جمع 30 مليون دولار):",
+                offer2TotalRevenue: "إجمالي العوائد:",
+                offer2TreasuryFunding: "تمويل خزينة المشروع (30%):",
+                offer2DistributableAmount: "المبلغ القابل للتوزيع:",
+                offer2YourShare: "حصتكم (30% من المبلغ):",
+                tokenomicsTitle: "اقتصاديات عملة $CHEASY",
+                tokenomics1Title: "40% - التسويق وبناء المجتمع",
+                tokenomics1Text: "لحملات الإحالة، المنح، وتوسيع قاعدة المستخدمين.",
+                tokenomics2Title: "30% - الطرح الأولي للعملة (ICO)",
+                tokenomics2Text: "لجمع التمويل اللازم للإطلاق والتوسع.",
+                tokenomics3Title: "15% - الفريق",
+                tokenomics3Text: "مع فترة حجز لضمان الالتزام طويل الأمد.",
+                tokenomics4Title: "10% - السيولة",
+                tokenomics4Text: "لضمان سهولة التداول عند الإدراج في المنصات.",
+                tokenomics5Title: "5% - طوارئ",
+                tokenomics5Text: "لمواجهة المخاطر غير المتوقعة وضمان الاستقرار.",
+                totalSupply: "المعروض الكلي",
+                footerTitle: "هل أنت مستعد لتكون جزءاً من المستقبل؟",
+                footerSubtitle: "نحن على ثقة بأن CHEASY يمثل فرصة استثنائية ليكون أحد المشاريع الرائدة في الجيل القادم من التجارة. انضم إلينا في هذه الرحلة.",
+                pitchDeckBtn: "لطلب العرض التقديمي (Pitch Deck)",
+                whitepaperBtn: "تحميل الورقة البيضاء (Whitepaper)",
+            }
+        };
+
+        let currentLang = 'ar';
+
+        const setLanguage = (lang) => {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-lang]');
+            const htmlEl = document.documentElement;
+            const switcherBtn = document.getElementById('lang-switcher');
+
+            if (lang === 'ar') {
+                htmlEl.lang = 'ar';
+                htmlEl.dir = 'rtl';
+                switcherBtn.textContent = 'English';
+            } else {
+                htmlEl.lang = 'en';
+                htmlEl.dir = 'ltr';
+                switcherBtn.textContent = 'العربية';
+            }
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+             document.getElementById('lang-switcher').addEventListener('click', () => {
+                const newLang = currentLang === 'ar' ? 'en' : 'ar';
+                setLanguage(newLang);
+            });
+            // Initial load
+            setLanguage('ar');
+        });
     </script>
 </body>
 </html>
-
-
